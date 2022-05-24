@@ -1,0 +1,132 @@
+body{
+    margin:0;
+    padding:0;
+}
+.SussyBalls {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/*makes top gray*/
+.SussyBalls {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2D2D31;
+    /*background-color: grey;*/
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid #555;
+}
+/*make horizontal*/
+.SussyBalls li {
+    float:left;
+    text-align: center;
+    border-right: 1px solid #555;
+}
+/*spaced out tabs*/
+.SussyBalls li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: large;
+}
+/*change color when hovering*/
+.SussyBalls li a:hover{
+    background: linear-gradient(90deg, #F1A13A 0%, #FEE24D 100%);
+    color:rgb(0, 0, 0);
+}
+  .icon{
+    position: fixed;
+    top: 87%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .icon a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+    background-color: #000;
+  }
+  .icon a:hover {
+    background-color: white;
+    color: #000;
+  }
+  .column {
+    font-size: 200%;
+    color: white;
+    float: center;
+    width: 100%;
+    height: 300px;
+    padding: 0px;
+    
+   
+  }
+  .colummn {
+    font-size: 200%;
+    color: white;
+    float: center;
+    width: 100%;
+    height: 407px;
+    padding: 0px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  } 
+  .ordered {
+    background: #2D2D31;
+    padding: 20px;
+    width: 20%;
+    margin-left: 20px;
+    font-family:'Brush Script MT', cursive;
+    font-size: 1.3em;
+    }
+    .unordered {
+        background: #2D2D31;
+        color: white;
+        padding: 20px;
+        width: 20%;
+        margin-left: 20px;
+        font-family:'Brush Script MT', cursive;
+        font-size: 1.3em;
+        }
+.ordered li ul{
+        background: #f3f0ec;
+        padding: 5px;
+        margin: 0px 0px 5px 20px;
+        background: #2D2D31;
+        padding: 5px;
+        margin-left: 0px;
+        }
+.nested-in-ul li{
+            background: #2D2D31;
+            padding: 5px;
+            margin-left: 0px;
+            color: white;
+}
+.wrapper{
+    text-align: center;
+    vertical-align: text-top;
+}
+.parent {
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+  .child {
+    vertical-align: middle;
+  }
+  .baby {
+    display: inline-block;
+    padding: 0rem 0rem;
+    vertical-align: middle;
+  }
+  
