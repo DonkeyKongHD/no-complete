@@ -146,7 +146,7 @@ body{
       position: fixed;
       animation-delay: 1s;
       z-index: 999999;
-
+      }
 
   @keyframes fly {
 
