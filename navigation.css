@@ -64,7 +64,7 @@ video.fullscreen {
     transform: translate(-50%, -50%);
 }
 mark {
-    background-color: #ffffff;
-    color: #2D2D31;
+    background-color: #2D2D31;
+    color: #000000;
     width: 1px;
     }
