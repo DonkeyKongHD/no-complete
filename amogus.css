@@ -131,4 +131,6 @@ body{
   }
 .sus{
     background: url(https://cdn.discordapp.com/attachments/890141163422617611/980790692639043624/btd.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
