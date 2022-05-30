@@ -140,6 +140,12 @@ body{
   }
 
   .flier > * {
+      top: 0;
+      left: 0;
+      transform: translateX(-120%) translateY(-120%) rotateZ(0);
+      position: fixed;
+      animation-delay: 1s;
+      z-index: 999999;
 
 
   @keyframes fly {
