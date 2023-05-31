@@ -12,13 +12,18 @@
     <nav class="mainmenu">
         <ul class="navbar">
             <li> <img src="https://cdn.discordapp.com/attachments/890141163422617611/1009371562710945872/unknown.png" height="44"></li>
-            <li><a href="home.html">Home</a></li>
+            <li><a class="pointer" onclick="menu('home')">Home</a></li>
             <li><a href="how.html">BTD6</a></li>
             <li><a href="primary.html">Monkeys</a></li>
         </ul>
     </nav>
     <nav class="mainmenu">
         <ul class="SussyBalls">
+            <li><div id="home" class="dropdown-content home">
+                <a href="home.html">Startpage</a>
+                <a href="thx.html">Special Thanks</a>
+                <a href="quiz.html">Quiz</a>
+                </div></li>
             <li><a href="how.html">How Does It Work?</a></li>
             <li><a href="best.html">Best Monkey</a></li>
             <li><a href="bloons.html">All Bloons</a></li>
@@ -42,5 +47,17 @@ Bellow this we have the average map on round 1 in BTD6. To the right of that we 
 </p>
 <img src="round_10.jpg" alt="simple map" height="300" 
 </div>
+<script>
+    var audio = new Audio('pipe.mp3');
+    audio.play();
+    let home = document.getElementById('home')
+    function menu(path){
+        document.getElementById(path).classList.toggle('menu')
+    }
+    home.addEventListener('mouseleave', Wow)
+    function Wow(){
+        document.getElementById('home').classList.remove('menu')
+    }
+</script>
 </body>
 </html>

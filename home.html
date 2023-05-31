@@ -8,23 +8,46 @@
     <link rel="icon" type="image/x-icon" href="download (3).jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bex">
+<body>
     <nav class="mainmenu">
         <ul class="navbar">
             <li> <img src="https://cdn.discordapp.com/attachments/890141163422617611/1009371562710945872/unknown.png" height="44"></li>
             <li><a href="home.html">Home</a></li>
-            <li><a href="how.html">BTD6</a></li>
+            <li class="pointer"><a onclick="menu('how')">BTD6</a></li>
             <li><a href="primary.html">Monkeys</a></li>
+            
         </ul>
     </nav>
     <nav class="mainmenu">
         <ul class="SussyBalls">
+            <li><div id="how" class="dropdown-content how">
+                <a href="how.html">How Does It Work?</a>
+                <a href="best.html">Best Monkey</a>
+                <a href="bloons.html">All Bloons</a>
+            </div></li>
             <li><a href="home.html">Startpage</a></li>
             <li><a href="thx.html">Special Thanks</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
         </ul>
     </nav>
 <header class="header">
         <h1>A Guide To Bloons Tower Defense 6</h1>  
+        <style>
+            h1 {
+                padding-left:20%;
+                font-size:1.5cm;
+                background-color:#950740;
+                border:10px #950740;
+                
+
+
+            }
+            body {
+    background-image: url("https://images.pexels.com/photos/3306986/pexels-photo-3306986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+        </style>
         <div class="icon">
             <a href="https://www.facebook.com/bloonstd6/" class="facebook"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com/ninjakiwigames" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -50,11 +73,39 @@
           </div>
 </header>
 <div class="wrapper">
-    <font size="5"
-<p><mark>
+    <font size="5">
+<p>
     Our goal with this website is to make people better at the monkey game also called Bloons tower defense 6.<br>
     The reason behind that is that we're tired of seeing people use garbage monkeys that can't defend against anything.<br>
     If you wish check out the creators of the game or pick up the game on steam you can press the social media buttons on the bottom left
-    </mark></p>
+    </p>
+    </font>
+    <style>
+        p {
+            border-style:inset;
+            text-align: center;
+    background-color:#C3073F;
+    border-radius: 50px;
+    border: 1px solid #C3073F;
+    margin: 5px;
+    border-color:#C3073F;
+        }
+    </style>
 </div>
+<script>
+    var audio = new Audio('pipe.mp3');
+    audio.play();
+    let how = document.getElementById('how')
+    function menu(path){
+        document.getElementById(path).classList.toggle('menu')
+    }
+
+    how.addEventListener('mouseleave', wow)
+    function wow(){  
+        document.getElementById('how').classList.remove('menu')
+        
+    }
+    
+    
+</script>
 </body>

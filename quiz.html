@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <link href="navigation.css" rel="stylesheet" type="text/css" />
+    <link href="amogus.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="download (3).jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bex">
+    <nav class="mainmenu">
+        <ul class="navbar">
+            <li> <img src="https://cdn.discordapp.com/attachments/890141163422617611/1009371562710945872/unknown.png" height="44"></li>
+            <li><a href="home.html">Home</a></li>
+            <li class="pointer"><a onclick="menu('how')">BTD6</a></li>
+            <li><a href="primary.html">Monkeys</a></li>
+            
+        </ul>
+    </nav>
+    <nav class="mainmenu">
+        <ul class="SussyBalls">
+            <li><div id="how" class="dropdown-content how">
+                <a href="how.html">How Does It Work?</a>
+                <a href="best.html">Best Monkey</a>
+                <a href="bloons.html">All Bloons</a>
+            </div></li>
+            <li><a href="home.html">Startpage</a></li>
+            <li><a href="thx.html">Special Thanks</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+<div id="formonkey">
+    <form
+    action="https://formspree.io/f/xqkoowjy"
+    method="POST" id="forms">
+    <h3>Bloons Tower Defense 6 Monkeys Quiz</h3>
+
+    <p>1. Which monkey is the BEST!</p>
+    <label>
+      <input type="radio" name="question1" value="A"> A) Dart Monkey
+    </label>
+    <label>
+      <input type="radio" name="question1" value="B"> B) ice monkey
+    </label>
+    <label>
+      <input type="radio" name="question1" value="C"> C) Ninja Monkey
+    </label>
+    <label>
+      <input type="radio" name="question1" value="D"> D) Super Monkey
+    </label>
+  
+    <!-- Include the rest of the questions using the same format -->
+  
+    <br><br>
+    <button id="subbut" type="submit" onclick="koomer">Submit</button>
+    </form>
+    <button  id="subbut"onclick="koomer()">reset answer</button>
+</div>
+<script>
+    var audio = new Audio('pipe.mp3');
+    audio.play();
+    function koomer() {
+    alert("try again ☻")
+    location.reload()
+    }
+    let how = document.getElementById('how')
+    function menu(path){
+        document.getElementById(path).classList.toggle('menu')
+    }
+
+    how.addEventListener('mouseleave', wow)
+    function wow(){  
+        document.getElementById('how').classList.remove('menu')
+        
+    }
+
+
+
+</script>
+        <style>
+
+            
+ 
+button#subbut {
+    font-size:20px;
+    color: #d1220b;
+    background-color: #310f0b;
+    border: 1px solid #f2481d;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    height:32px;
+    font-size:14px;
+    transition: all 0.2s ease-in-out;
+    margin:5px;
+}
+    button:hover {
+    box-shadow: 1px 1px #310f0b, 2px 2px #310f0b, 3px 3px #310f0b;
+    transform: translateY(-3px);
+}
+
+            #formonkey {
+                color: #310f0b;
+   
+                
+                border-style:inset;
+            text-align: center;
+    background-color:#C3073F;
+    border-radius: 1000px;
+    border: 25px ;
+    margin: 50px;
+    border-color:#C3073F;
+    padding:50px;
+
+    
+            }
+            
+            body {
+    background-image: url("https://images.pexels.com/photos/3306986/pexels-photo-3306986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+        </style>
+       
+
+</div>
+</body>

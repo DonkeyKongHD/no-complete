@@ -30,6 +30,7 @@ body{
 }
 /*spaced out tabs*/
 .navbar li a {
+    float:left;
     display: block;
     color: rgb(255, 255, 255);
     padding: 14px 16px;

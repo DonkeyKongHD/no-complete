@@ -133,7 +133,7 @@ body{
     background: url(https://cdn.discordapp.com/attachments/890141163422617611/980790692639043624/btd.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    background-posistion: bottom;
+    background-position: bottom;
 }
 .flier {
     pointer-events: none;
@@ -183,3 +183,43 @@ body{
       transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
     }
   }
+  .pointer{
+    cursor: pointer;
+  }
+  .hidden {
+    visibility: hidden;
+  }
+  .txt{
+    position: absolute;
+    top: auto;
+  }
+    
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    background-color: #535357;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    overflow: auto;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 14px 16px;
+    display: block;
+    text-decoration: none;
+  }
+  .dropdown a:hover {
+    background-color: #000000;
+  }
+  .menu{
+    display: block;
+  }
+.how {
+  margin-left: 126.42px;
+}
+.home {
+  margin-left: 50.43px;
+}

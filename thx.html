@@ -13,14 +13,21 @@
         <ul class="navbar">
             <li> <img src="https://cdn.discordapp.com/attachments/890141163422617611/1009371562710945872/unknown.png" height="44"></li>
             <li><a href="home.html">Home</a></li>
-            <li><a href="how.html">BTD6</a></li>
+            <li class="pointer"><a onclick="menu('how')">BTD6</a></li>
             <li><a href="primary.html">Monkeys</a></li>
+            
         </ul>
     </nav>
     <nav class="mainmenu">
         <ul class="SussyBalls">
+            <li><div id="how" class="dropdown-content how">
+                <a href="how.html">How Does It Work?</a>
+                <a href="best.html">Best Monkey</a>
+                <a href="bloons.html">All Bloons</a>
+            </div></li>
             <li><a href="home.html">Startpage</a></li>
             <li><a href="thx.html">Special Thanks</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
         </ul>
     </nav>
 <header class="header">
@@ -32,7 +39,7 @@
     <a href="https://store.steampowered.com/app/960090/Bloons_TD_6/" class="google"><i class="fa fa-google"></i></a>
     <a href="https://www.youtube.com/c/NinjaKiwiGames/videos" class="youtube"><i class="fa fa-youtube"></i></a>
   </div>
-<div class="wrapper">
+<div class="wrap">
     <font size="5">
 <p>
     We want to give a special thanks to our sponsors and other people who made this possible.<br>
@@ -42,7 +49,66 @@
 <p>
     Our second thanks goes to former president of the USA Obama!
 </p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/640px-President_Barack_Obama.jpg" height="500"
+<div id="div1" >
+<img id ="message"src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/640px-President_Barack_Obama.jpg" height="500">
 </div>
+</font>
+</div>
+<style>
+    .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  header {
+    font-size:larger;
+    text-align:center;
+  }
+
+  .animate {
+  
+  animation: myfirst 3s infinite alternate;
+  }
+
+@keyframes myfirst {
+  10%{rotate:10deg;}
+  50%{rotate:-10deg;}
+  100%{rotate:0deg;}
+}
+  
+
+</style>
+<script>
+    var audio = new Audio('pipe.mp3');
+    audio.play();
+    let how = document.getElementById('how')
+    function menu(path){
+        document.getElementById(path).classList.toggle('menu')
+    }
+
+    how.addEventListener('mouseleave', wow)
+    function wow(){  
+        document.getElementById('how').classList.remove('menu')
+        
+    }
+    function out() {
+      let msg = document.getElementById("message");
+      
+      msg.classList.remove('animate')
+    }
+    function over() { 
+      let msg = document.getElementById('message');
+     
+      msg.classList.add('animate')
+      
+
+    }
+
+    let division = document.querySelector("#div1");
+    division.addEventListener("mouseleave", out);
+    division.addEventListener("mouseover", over);
+</script>
 </body>
 </html>

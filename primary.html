@@ -12,34 +12,110 @@
     <nav class="mainmenu">
         <ul class="navbar">
             <li> <img src="https://cdn.discordapp.com/attachments/890141163422617611/1009371562710945872/unknown.png" height="44"></li>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="how.html">BTD6</a></li>
+            <li><a class="pointer" onclick="menu('home', 'how')">Home</a></li>
+            <li class="pointer"><a onclick="menu('how', 'home')">BTD6</a></li>
             <li><a href="primary.html">Monkeys</a></li>
         </ul>
     </nav>
     <nav class="mainmenu">
         <ul class="SussyBalls">
-            <li><a href="primary.html">Primary</a></li>
-            <li><a href="military.html">Military</a></li>
-            <li><a href="magic.html">Magic</a></li>
-            <li><a href="support.html">Support</a></li>
+            <li><div id="home" class="dropdown-content home">
+            <a href="home.html">Startpage</a>
+            <a href="thx.html">Special Thanks</a>
+            <a href="quiz.html">Quiz</a>
+            </div></li>
+            <li><div id="how" class="dropdown-content how">
+                <a href="how.html">How Does It Work?</a>
+                <a href="best.html">Best Monkey</a>
+                <a href="bloons.html">All Bloons</a>
+            </div></li>
+            <li><a class='pointer' onclick="typ('p1')">Primary</a></li>
+            <li><a class='pointer' onclick="typ('p2')">Military</a></li>
+            <li><a class='pointer' onclick="typ('p3')">Magic</a></li>
+            <li><a class='pointer' onclick="typ('p4')">Support</a></li>
         </ul>
     </nav>
 <header class="header">
-        <h1>Primary Monkeys</h1>
+        <h1 id="he">Choose which monkeys you want to look at</h1>
 </header>
-<img src="https://cdn.discordapp.com/attachments/890141163422617611/978044639447744512/2022-05-22_4.jpg" height="338">
+<img id="img" src="" height="338">
 <div class="column" style="background-color:#2D2D31;">
-    
-    <p>Boomerang---------it throws a big telephone that circles back to it<br>
+    <p id="start" class="txt">Here you can see different monekys in their respective classes
+    </p>
+    <p id="p1" class="hidden txt">Boomerang---------it throws a big telephone that circles back to it<br>
         Bomb Shooter-----throws children at high velocities that they explode on impact :)<br>
        Tack Shooter------shoots nerf darts with nails at kids surrounding it	<br>
        Dart Monkey-------average mischievous child throwing sharp nails at predators<br>
         Ice Monkey-------best monkey ever created that has the most drip<br>
         Glue Gunner------ :)
        </p>
+       <p id="p2" class="hidden txt">Monkey Ace---------famous for its attacks on japan in 1945 and its show in 2001 september<br>
+        Heli Pilot--------mainly used in vietnam In the cold war, now is used to spray kids in napalm<br>
+        Mortar Monkey-----uses its “nerf” bombs to explode nearby kindergardens<br>
+        Dartling Gunner---uses its mass amounts of “bullets” to mow down nearby schools<br>
+        Sniper Monkey-----uses his skills from afghanistoon to spray “bullets” on unexpecting kids<br>
+        Sub Monkey--------hides in its sub to calculate its next nuclear strike on the enemy<br>
+        Monkey Buccaneer--shoots massive black balls at unexpecting kids when they exit the kindergarden
+        </p>
+        <p id="p3" class="hidden txt">Wizard Monkey----uses real magic to set ablaze unsuspecting kids<br>
+            Super Monkey----uses its buff powers to pound the dangerous kids out of your neighborhood<br>
+            Ninja Monkey----using its genetics from their previous asian parents it throws ninja stars at fast speed<br>	
+            Alchemist-------uses “acid” to force the other kids to submit to their tyranny<br>
+            Druid-----------uses voodoo dolls to force the other children to commit atrocities<br>
+            </p>
+       <p id="p4" class="hidden txt">Banana Farm------a simple way to commit money laundering<br>
+        Spike Factory---a simple factory that makes stepping on lego seem like a joke<br>
+        Monkey Village--a village with people in it used for practicing “bombing” targets <br>Engineer Monkey--made for cleaning and trapping unsuspecting kids going home
+        </p>
+        
   </div>
 </div>
 </div>
+<script>
+    var audio = new Audio('pipe.mp3');
+    audio.play();
+    let how = document.getElementById('how')
+    let home = document.getElementById('home')
+    function menu(path, no){
+        document.getElementById(path).classList.toggle('menu')
+        document.getElementById(no).classList.remove('menu')
+    }
+
+    how.addEventListener('mouseleave', wow)
+    function wow(){  
+        document.getElementById('how').classList.remove('menu')
+    }
+    home.addEventListener('mouseleave', Wow)
+    function Wow(){
+        document.getElementById('home').classList.remove('menu')
+    }
+    let he = document.getElementById('he')
+    let img = document.getElementById('img')
+    function typ(px){
+        document.getElementById('start').classList.add('hidden')
+        switch(px){
+            case 'p1':
+                he.innerText='Primary Monkeys'
+                img.src='https://cdn.discordapp.com/attachments/890141163422617611/978044639447744512/2022-05-22_4.jpg'
+                break
+            case 'p2':
+                he.innerText='Military Monkeys'
+                img.src='https://cdn.discordapp.com/attachments/890141163422617611/1009377355141230725/good_crop.jpg'
+                break
+            case 'p3':
+                he.innerText='Magic Monkeys'
+                img.src='https://cdn.discordapp.com/attachments/890141163422617611/978044638738923570/2022-05-22_42.jpg'
+                break
+            default:
+                he.innerText='Support Monkeys'
+                img.src='https://cdn.discordapp.com/attachments/890141163422617611/978044639149969418/2022-05-22_41.jpg'
+        }
+        document.getElementById('p1').classList.add('hidden')
+        document.getElementById('p2').classList.add('hidden')
+        document.getElementById('p3').classList.add('hidden')
+        document.getElementById('p4').classList.add('hidden')
+        document.getElementById(px).classList.remove('hidden')
+    }
+</script>
 </body>
 </html>
